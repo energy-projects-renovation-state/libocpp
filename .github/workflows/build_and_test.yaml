@@ -39,7 +39,7 @@ jobs:
     runs-on: ${{ inputs.runner || 'ubuntu-22.04' }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v6.0.1
         with:
           path: source
       - name: Setup run scripts
@@ -94,13 +94,13 @@ jobs:
     runs-on: ${{ inputs.runner || 'ubuntu-22.04' }}
     steps:
       - name: Checkout local github actions
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           repository: everest/everest-ci
           ref: ${{ needs.ci.outputs.sha_everest_ci }}
           path: everest-ci
       - name: Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v6.0.1
         with:
           path: source
       - name: Download doxygen-docs artifact
