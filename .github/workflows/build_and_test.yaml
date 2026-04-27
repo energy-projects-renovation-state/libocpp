@@ -48,7 +48,7 @@ jobs:
           rsync -a source/.ci/build-kit/scripts/ scripts
       - name: Docker Meta
         id: meta
-        uses: docker/metadata-action@v5
+        uses: docker/metadata-action@v6
         with:
           images: ${{ env.BUILD_KIT_IMAGE_NAME }}
           sep-tags: ","
